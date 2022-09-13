@@ -1,3 +1,4 @@
+import "bulmaswatch/cosmo/bulmaswatch.min.css";
 import * as esbuild from "esbuild-wasm";
 import ReactDom from "react-dom";
 import { useState, useEffect, useRef } from "react";
@@ -5,7 +6,7 @@ import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 import { unpkgFetchPlugin } from "./plugins/unpkg-fetch-plugin";
 
 // Components
-import CodeEditor from "./components/code/CodeEditor";
+import CodeEditor from "./components/code/CodeEditor/CodeEditor";
 
 const App = () => {
   const ref = useRef<any>();
