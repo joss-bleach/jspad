@@ -4,6 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 import { unpkgFetchPlugin } from "./plugins/unpkg-fetch-plugin";
 
+// Components
+import CodeEditor from "./components/code/CodeEditor";
+
 const App = () => {
   const ref = useRef<any>();
   const iframe = useRef<any>();
@@ -63,6 +66,10 @@ const App = () => {
 
   return (
     <div>
+      <CodeEditor
+        onChange={(value) => setInput(value)}
+        initialValue="// Enter some code!"
+      />
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
