@@ -34,8 +34,11 @@ const CodePreview: React.FC<CodePreviewProps> = ({ code }) => {
 
   useEffect(() => {
     iframe.current.srcodc = html;
-    iframe.current.contentWindow.postMessage(code, "*");
+    setTimeout(() => {
+      iframe.current.contentWindow.postMessage(code, "*");
+    }, 50);
   }, [code]);
+
   return (
     <div className="preview-wrapper">
       <iframe
