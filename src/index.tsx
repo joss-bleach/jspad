@@ -1,4 +1,4 @@
-import "bulmaswatch/cosmo/bulmaswatch.min.css";
+import "bulmaswatch/solar/bulmaswatch.min.css";
 import ReactDom from "react-dom";
 
 // Components
